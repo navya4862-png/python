@@ -209,9 +209,74 @@ def add_element(arr, index, num):
 
 print(add_element([1, 2, 4], 2, 3))
 
+#32. Remove All Instances of a Value
+# Problem: Remove all occurrences of a specific value. Input: [1, 2, 2, 3], remove 2 Output: [1, 3]
+def remove(arr,nums):
+    result=[]
+    for num in arr:
+        if num!=nums:
+            result.append(num)
+    return result
+print(remove([1,2,2,3],2))
 
+# 33. Get Index of an Element
+# Problem: Return the index of a given value. Input: [10, 20, 30], find index of 20 Output: 1
+def ind(arr,value):
+    for i in range(0,len(arr)):
+        if arr[i]==value:
+            return i
+print(ind([10,20,30],20))
 
+# 34. Square All Elements in a List
+# Problem: Return a list with each element squared. Input: [1, 2, 3] Output: [1, 4, 9]
 
+def square(arr):
+    result=[]
+    for num in arr:
+        result.append(num*2)
+    return result
+print(square([1,2,3]))
+
+# 35. Filter Out Negative Numbers
+# Problem: Remove all negative values from the list. Input: [-1, 2, -3, 4] Output: [2, 4]
+
+def positive(arr):
+    result=[]
+    for num in arr:
+        if num>0:
+          result.append(num)
+    return result
+print(positive([-1, 2, -3, 4]))
+
+# 36. Get Elements Greater Than a Value
+# Problem: Return elements greater than a specified number. Input: [1, 5, 8, 3], greater than 4 Output: [5, 8]
+def greater(arr,value):
+    result=[]
+    for num in arr:
+        if num>value:
+          result.append(num)
+    return result
+print(greater([1, 5, 8, 3],4))
+# 37. Find Duplicates in List
+# Problem: Return a list of duplicated values. Input: [1, 2, 2, 3, 3, 4] Output: [2, 3]
+def dup(arr):
+    unique=[]
+    result=[]
+    for num in arr:
+        if num not in unique:
+          unique.append(num)
+        else:
+            result.append(num)
+    return result
+print(dup([1, 2,2,3,3,4]))
+
+# 39. Check If List Contains a Value
+# Problem: Return True if list contains a specific value. Input: [1, 2, 3], check 2 Output: True
+def contain(arr,value):
+    for num in arr:
+        if num==value:
+            return True
+print(contain([1, 2,3],2))
 
 
 
