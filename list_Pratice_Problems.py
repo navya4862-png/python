@@ -1,6 +1,11 @@
+# 14. Check if List is Palindrome
+# Problem: Check if the list reads the same forwards and backwards. Input: [1, 2, 1] Output: True
+def pal(list):
+    return list==list[::-1]
+print(pal([1,2,1]))
+
 # 15. Count Positive, Negative, Zero
 # Problem: Count the number of positive, negative and zero values in a list. Input: [0, -1, 2, -3, 4] Output: Positive: 2, Negative: 2, Zero: 1
-
 def count(arr):
     positive=0
     negative=0
@@ -33,9 +38,9 @@ def second_highest(arr):
     return  second_max_num
 print(second_highest([1, 3, 4, 5, 0] ))
 
+
 # 17. Find Second Smallest Number in List
 # Problem: Find the second lowest value. Input: [5, 1, 4, 2, 3] Output: 2
-
 def second_smallest(arr):
     min_num=float("inf")
     second_min_num=float("inf")
@@ -48,6 +53,12 @@ def second_smallest(arr):
     return  second_min_num
 print(second_smallest([5, 1, 4, 2, 3]))
 
+#or
+def large(l):
+    unique=list(set(l))
+    unique.sort()
+    return unique[-2]
+print(large([1,2,2,3,3,3,6,6,6,7,]))
 
 # 18. Copy List to Another List
 # Problem: Copy the contents of one list to another. Explanation: Use slicing or copy(). Input: [1, 2, 3] Output: [1, 2, 3]
@@ -64,8 +75,6 @@ def prime(arr):
     for i in range(0,len(arr)):
         num=arr[i]
         count=0
-        if num==1:
-            result.append(num)
         for j in range(1,num+1):
           if num%j==0:
             count+=1
@@ -257,6 +266,7 @@ def greater(arr,value):
           result.append(num)
     return result
 print(greater([1, 5, 8, 3],4))
+
 # 37. Find Duplicates in List
 # Problem: Return a list of duplicated values. Input: [1, 2, 2, 3, 3, 4] Output: [2, 3]
 def dup(arr):
