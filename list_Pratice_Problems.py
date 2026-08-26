@@ -280,6 +280,18 @@ def dup(arr):
     return result
 print(dup([1, 2,2,3,3,4]))
 
+#38. Rotate List Elements Right
+#Problem: Rotate list by k positions to the right. Input: [1, 2, 3, 4], k = 2 Output: [3, 4, 1, 2]
+def rotation(arr,k):
+    n=len(arr)
+    k=k%n
+    index=n-k
+    r=arr[index:]
+    l=arr[:index]
+    arr[:]=r+l
+    return arr
+print(rotation([1,2,3,4],5))
+
 # 39. Check If List Contains a Value
 # Problem: Return True if list contains a specific value. Input: [1, 2, 3], check 2 Output: True
 def contain(arr,value):
@@ -288,7 +300,14 @@ def contain(arr,value):
             return True
 print(contain([1, 2,3],2))
 
-
+# 40. Chunk List into Smaller Lists
+# Problem: Break a list into chunks of given size. Input: [1, 2, 3, 4, 5, 6], chunk size 2 Output: [[1, 2], [3, 4], [5, 6]]
+def chunk_list(arr,size):
+    result=[]
+    for i in range(0,len(arr),size):
+        result.append(arr[i:i+size])
+    return result
+print(chunk_list([1,2,3,4,5,6],2))
 
 
 
