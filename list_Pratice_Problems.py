@@ -1,3 +1,108 @@
+# 1. Add an Element to a List
+# Problem: Write a function to add an element to a list. Explanation: Use append() to add the element to the end. Input: [1, 2, 3], add 4 Output: [1, 2, 3, 4]
+def add_element(lst, element):
+    lst.append(element)
+    return lst
+
+print(add_element([1, 2, 3], 4))
+
+# 2. Remove an Element from a List
+# Problem: Write a function to remove a specific element from a list. Explanation: Use remove() or pop() if index is known. Input: [1, 2, 3, 4], remove 3 Output: [1, 2, 4]
+def remove_element(lst, element):
+    lst.remove(element)
+    return lst
+
+print(remove_element([1, 2, 3, 4], 3))
+
+# 3. Find Maximum in List
+# Problem: Find the maximum value in a list. Explanation: Use max() or iterate manually. Input: [4, 7, 1, 9] Output: 9
+def find_max(lst):
+    return max(lst)
+
+print(find_max([4, 7, 1, 9]))
+
+# 4. Find Minimum in List
+# Problem: Find the minimum value in a list. Explanation: Use min() or iterate manually. Input: [4, 7, 1, 9] Output: 1
+def find_min(lst):
+    return min(lst)
+
+print(find_min([4, 7, 1, 9]))
+
+# 5. Sum of All Elements in List
+# Problem: Write a function to find the sum of all list elements. Explanation: Use sum() or loop to add all items. Input: [1, 2, 3] Output: 6
+def list_sum(lst):
+    return sum(lst)
+
+print(list_sum([1, 2, 3]))
+
+# 6. Count Occurrence of an Element
+# Problem: Count how many times a value appears in a list. Explanation: Use count() method. Input: [1, 2, 2, 3, 2], value 2 Output: 3
+def count_element(lst, element):
+    return lst.count(element)
+
+print(count_element([1, 2, 2, 3, 2], 2))
+
+# 7. Reverse a List
+# Problem: Write a function to reverse the order of list elements. Explanation: Use slicing or reverse() method. Input: [1, 2, 3] Output: [3, 2, 1]
+def reverse_list(lst):
+    return lst[::-1]
+
+print(reverse_list([1, 2, 3]))
+
+# 8. Sort a List
+# Problem: Write a function to sort a list in ascending order. Explanation: Use sort() or sorted(). Input: [4, 1, 3, 2] Output: [1, 2, 3, 4]
+def sort_list(lst):
+    return sorted(lst)
+
+print(sort_list([4, 1, 3, 2]))
+
+# 9. Remove Duplicates from a List
+# Problem: Eliminate duplicate values. Explanation: Use set() or manual loop. Input: [1, 2, 2, 3] Output: [1, 2, 3]
+def remove_duplicates(lst):
+    return list(set(lst))
+
+print(remove_duplicates([1, 2, 2, 3]))
+
+# 10. Merge Two Lists
+# Problem: Merge two lists into one. Explanation: Use + operator or extend(). Input: [1, 2], [3, 4] Output: [1, 2, 3, 4]
+def merge_lists(lst1, lst2):
+    return lst1 + lst2
+
+print(merge_lists([1, 2], [3, 4]))
+
+# 11. Find Common Elements in Two Lists
+# Problem: Return common elements between two lists. Explanation: Use set() and & or loops. Input: [1, 2, 3], [2, 3, 4] Output: [2, 3]
+def common_elements(lst1, lst2):
+    return list(set(lst1) & set(lst2))
+
+print(common_elements([1, 2, 3], [2, 3, 4]))
+
+# 12. Print Even Numbers in a List
+# Problem: Print only even numbers from a list. Explanation: Use modulo condition in a loop. Input: [1, 2, 3, 4] Output: [2, 4]
+def even_numbers(lst):
+    result = []
+
+    for x in lst:
+        if x % 2 == 0:
+            result.append(x)
+
+    return result
+
+print(even_numbers([1, 2, 3, 4]))
+
+# 13. Print Odd Numbers in a List
+# Problem: Print only odd numbers from a list. Input: [1, 2, 3, 4] Output: [1, 3]
+def odd_numbers(lst):
+    result = []
+
+    for x in lst:
+        if x % 2 != 0:
+            result.append(x)
+
+    return result
+
+print(odd_numbers([1, 2, 3, 4]))
+
 # 14. Check if List is Palindrome
 # Problem: Check if the list reads the same forwards and backwards. Input: [1, 2, 1] Output: True
 def pal(list):
