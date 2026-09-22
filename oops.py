@@ -197,6 +197,36 @@ p1=Product("Rice",10000)
 p1.calculate_discount()
 p1.display()
 
+# 9.ATM Transcation
+class ATM():
+    def __init__(self, account_number, balance):
+        self.account_number = account_number
+        self.balance = balance
+
+    def deposit(self, amount):
+        self.balance = self.balance + amount
+        print("Deposited Amount:", amount)
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance = self.balance - amount
+            print("Withdrawn Amount:", amount)
+        else:
+            print("Insufficient Balance")
+
+    def check_balance(self):
+        print("Account Number:", self.account_number)
+        print("Current Balance:", self.balance)
+
+
+a1 = ATM(12345, 5000)
+
+a1.deposit(2000)
+a1.check_balance()
+
+a1.withdraw(3000)
+a1.check_balance()
+
 # 10. car information
 
 class Car():
