@@ -106,3 +106,67 @@ r1=Rectangle(a,b)
 
 r1.area()
 r1.perimeter()
+
+# 6. Student Marks
+class Student():
+  def __init__(self,name,marks):
+    self.name=name
+    self.marks=marks
+
+  def display_marks(self):
+    print("Name:",self.name)
+    print("Marks:",self.marks)
+
+  def check_result(self):
+    
+    if self.marks>=40:
+      print("Pass")
+    else:
+      print("Fail")
+
+s1=Student("Navya",45)
+s2=Student("Sandy",90)
+s3=Student("Mickey",78)
+s4=Student("Kaju",80)
+s5=Student("Vinnu",15)
+
+s1.display_marks()
+s1.check_result()
+s2.display_marks()
+s2.check_result()
+s3.display_marks()
+s3.check_result()
+s4.display_marks()
+s4.check_result()
+s5.display_marks()
+s5.check_result()
+
+
+# 7 Employee Bonus
+
+class Employee():
+  def __init__(self,name,salary):
+    self.name=name
+    self.salary=salary
+
+  def calculate_bonus(self):
+    
+    if self.salary>=50000:
+      self.bonus=self.salary*0.1
+      
+    else:
+        self.bonus=self.salary * 0.05
+      
+    self.total=self.bonus+self.salary
+      
+  def display(self):
+
+    print("Employee Name:",self.name)
+    print("Salary:",self.salary)
+    print("Bonus:",self.bonus)
+    print("Total Salary:",self.total)
+
+e1=Employee("Nav",70000)
+
+e1.calculate_bonus()
+e1.display()
